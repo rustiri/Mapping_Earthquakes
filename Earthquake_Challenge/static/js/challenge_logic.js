@@ -223,6 +223,9 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
       // Style the lines with a color and weight that will make it stand out on all maps.
       color: "#d13e0d",
       weight: 2,
+      onEachFeature: function(feature, layer) {
+        console.log(layer);
+      }
     }).addTo(tectonicPlates);
     
     // Then we add the tectonic layer to the map.
